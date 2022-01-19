@@ -1,4 +1,5 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
 
@@ -29,6 +30,13 @@ if (process.env.NODE_ENV === 'production') {
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
+
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/shop-shop', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+
+mongoose.set('debug', true);
 
 db.once('open', () => {
   app.listen(PORT, () => {
