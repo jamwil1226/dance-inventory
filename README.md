@@ -5,7 +5,7 @@
 
 ## Description
 
-#### This SHOP SHOP is an e-commerce platform that uses REDUX to manage global state instead of React's Context API with STRIPE integration.
+#### This SHOP SHOP is an e-commerce platform that uses REDUX to manage global state (instead of React's Context API) with STRIPE integration.
 
 ![User Story](./client/public/images/user-story.png)
 
