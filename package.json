@@ -1,7 +1,7 @@
 {
   "name": "mern-shopping",
   "version": "1.0.0",
-  "description": "",
+  "description": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
   "main": "server/server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
@@ -23,5 +23,13 @@
     "if-env": "^1.0.4",
     "react-redux": "^7.2.6",
     "redux": "^4.1.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamwil1226/shop-shop-redux.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jamwil1226/shop-shop-redux/issues"
+  },
+  "homepage": "https://github.com/jamwil1226/shop-shop-redux#readme"
 }
