@@ -5,11 +5,11 @@ db.once('open', async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    { name: 'Food' },
-    { name: 'Household Supplies' },
-    { name: 'Electronics' },
-    { name: 'Books' },
-    { name: 'Toys' }
+    { name: 'Leotards' },
+    { name: 'Lyrical Dresses' },
+    { name: 'Tutu Dresses' },
+    { name: 'Skirts/Tutus' },
+    { name: 'Shoes' }
   ]);
 
   console.log('categories seeded');
@@ -18,113 +18,314 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: 'Tin of Cookies',
-      description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+      name: 'Blue/Black Leotard',
+      image: 'blue-black-leotard.png',
       category: categories[0]._id,
-      price: 2.99,
-      quantity: 500
-    },
-    {
-      name: 'Canned Coffee',
-      description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'canned-coffee.jpg',
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Blue Short Sleeve Leotard',
+      image: 'blue-short-sleeve-leotard.png',
       category: categories[0]._id,
-      price: 1.99,
-      quantity: 500
-    },
-    {
-      name: 'Toilet Paper',
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'White Short Sleeve Leotard',
+      image: 'white-short-sleeve-leotard.png',
+      category: categories[0]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Black Short Sleeve Leotard',
+      image: 'black-short-sleeve-leotard.png',
+      category: categories[0]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Pink Long Sleeve Leotard',
+      image: 'pink-long-sleeve-leotard.png',
+      category: categories[0]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Black Long Sleeve Leotard',
+      image: 'black-long-sleeve-leotard.png',
+      category: categories[0]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'White Long Sleeve Leotard',
+      image: 'white-long-sleeve-leotard.png',
+      category: categories[0]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Black Biketard',
+      image: 'black-biketard.png',
+      category: categories[0]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Leopard Biketard',
+      image: 'leopard-biketard.png',
+      category: categories[0]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Light Blue Dress',
+      image: 'light-blue-dress.png',
       category: categories[1]._id,
-      description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'toilet-paper.jpg',
-      price: 7.99,
-      quantity: 20
-    },
-    {
-      name: 'Handmade Soap',
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Teal Dress',
+      image: 'teal-dress.png',
       category: categories[1]._id,
-      description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'soap.jpg',
-      price: 3.99,
-      quantity: 50
-    },
-    {
-      name: 'Set of Wooden Spoons',
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Black Dress',
+      image: 'black-dress.png',
       category: categories[1]._id,
-      description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-      image: 'wooden-spoons.jpg',
-      price: 14.99,
-      quantity: 100
-    },
-    {
-      name: 'Camera',
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Pink Dress',
+      image: 'pink-dress.png',
+      category: categories[1]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Navy Dress',
+      image: 'navy-dress.png',
+      category: categories[1]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Black/Gold Dress',
+      image: 'black-gold-dress.png',
+      category: categories[1]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Champagne Dress',
+      image: 'champagne-dress.png',
+      category: categories[1]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Maroon Dress',
+      image: 'maroon-dress.png',
+      category: categories[1]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Pink/Gold Tutu Dress',
+      image: 'pink-gold-tutu-dress.png',
       category: categories[2]._id,
-      description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'camera.jpg',
-      price: 399.99,
-      quantity: 30
-    },
-    {
-      name: 'Tablet',
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Toyal Blue Tutu Dress',
+      image: 'royal-blue-tutu-dress.png',
       category: categories[2]._id,
-      description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-      image: 'tablet.jpg',
-      price: 199.99,
-      quantity: 30
-    },
-    {
-      name: 'Tales at Bedtime',
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Aqua Tutu Dress',
+      image: 'aqua-tutu-dress.png',
+      category: categories[2]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Pink Tutu Dress',
+      image: 'pink-tutu-dress.png',
+      category: categories[2]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Light Blue Tutu Dress',
+      image: 'light-blue-tutu-dress.png',
+      category: categories[2]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Blue Tutu',
+      image: 'blue-tutu.png',
       category: categories[3]._id,
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: 'bedtime-book.jpg',
-      price: 9.99,
-      quantity: 100
-    },
-    {
-      name: 'Spinning Top',
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Pink Tutu',
+      image: 'pink-tutu.png',
+      category: categories[3]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Purple Tutu',
+      image: 'purple-tutu.png',
+      category: categories[3]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Blue/Purple Tutu',
+      image: 'blue-purple-tutu.png',
+      category: categories[3]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Gold Glitter Tutu',
+      image: 'gold-tutu.png',
+      category: categories[3]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Silver Glitter Tutu',
+      image: 'silver-tutu.png',
+      category: categories[3]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'White Long Chiffon Skirt',
+      image: 'white-long-skirt.png',
+      category: categories[3]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Black Long Chiffon Skirt',
+      image: 'black-long-skirt.png',
+      category: categories[3]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Maroon Long Chiffon Skirt',
+      image: 'maroon-long-skirt.png',
+      category: categories[3]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'White Skirt',
+      image: 'white-skirt.png',
+      category: categories[3]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Blue Skirt',
+      image: 'blue-skirt.png',
+      category: categories[3]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Black Skirt',
+      image: 'black-skirt.png',
+      category: categories[3]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Pink Skirt',
+      image: 'pink-skirt.png',
+      category: categories[3]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Pink Ballet Slippers',
+      image: 'pink-ballet-slippers.png',
       category: categories[4]._id,
-      description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-      image: 'spinning-top.jpg',
-      price: 1.99,
-      quantity: 1000
-    },
-    {
-      name: 'Set of Plastic Horses',
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Black Ballet Slippers',
+      image: 'black-ballet-slippers.png',
       category: categories[4]._id,
-      description:
-        'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-      image: 'plastic-horses.jpg',
-      price: 2.99,
-      quantity: 1000
-    },
-    {
-      name: 'Teddy Bear',
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Red Toe Shoes',
+      image: 'red-toe-shoes.png',
       category: categories[4]._id,
-      description:
-        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-      image: 'teddy-bear.jpg',
-      price: 7.99,
-      quantity: 100
-    },
-    {
-      name: 'Alphabet Blocks',
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Pink Toe Shoes',
+      image: 'pink-toe-shoes.png',
       category: categories[4]._id,
-      description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'alphabet-blocks.jpg',
-      price: 9.99,
-      quantity: 600
-    }
-  ]);
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Black Toe Shoes',
+      image: 'black-toe-shoes.png',
+      category: categories[4]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'White Tap Shoes',
+      image: 'white-tap-shoes.png',
+      category: categories[4]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Tan Tap Shoes',
+      image: 'tan-tap-shoes.png',
+      category: categories[4]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Black Tap Shoes',
+      image: 'black-tap-shoes.png',
+      category: categories[4]._id,
+      size: 'S',
+      quantity: 2
+  },
+  {
+      name: 'Tan Jazz Shoes',
+      image: 'tan-jazz-shoes.png',
+      category: categories[4]._id,
+      size: 'S',
+      quantity: 2
+  },
+]);
 
   console.log('products seeded');
 

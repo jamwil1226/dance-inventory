@@ -44,13 +44,13 @@ const Cart = () => {
     dispatch({ type: TOGGLE_CART });
   }
 
-  function calculateTotal() {
-    let sum = 0;
-    state.cart.forEach((item) => {
-      sum += item.price * item.purchaseQuantity;
-    });
-    return sum.toFixed(2);
-  }
+  // function calculateTotal() {
+  //   let sum = 0;
+  //   state.cart.forEach((item) => {
+  //     sum += item.size * item.purchaseQuantity;
+  //   });
+  //   return sum.toFixed(2);
+  // }
 
   function submitCheckout() {
     const productIds = [];
@@ -81,7 +81,7 @@ const Cart = () => {
       <div className="close" onClick={toggleCart}>
         [close]
       </div>
-      <h2>Shopping Cart</h2>
+      <h2>Check Out</h2>
       {state.cart.length ? (
         <div>
           {state.cart.map((item) => (
@@ -89,10 +89,10 @@ const Cart = () => {
           ))}
 
           <div className="flex-row space-between">
-            <strong>Total: ${calculateTotal()}</strong>
+            {/* <strong>Total: {calculateTotal()}</strong> */}
 
             {Auth.loggedIn() ? (
-              <button onClick={submitCheckout}>Checkout</button>
+              <button onClick={submitCheckout}>Check Out</button>
             ) : (
               <span>(log in to check out)</span>
             )}
@@ -103,7 +103,7 @@ const Cart = () => {
           <span role="img" aria-label="shocked">
             😱
           </span>
-          You haven't added anything to your cart yet!
+          Nothing has been checked out yet!
         </h3>
       )}
     </div>

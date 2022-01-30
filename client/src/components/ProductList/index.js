@@ -59,13 +59,13 @@ function ProductList() {
               _id={product._id}
               image={product.image}
               name={product.name}
-              price={product.price}
+              size={product.size}
               quantity={product.quantity}
             />
           ))}
         </div>
       ) : (
-        <h3>You haven't added any products yet!</h3>
+        <h3>You haven't added any items yet!</h3>
       )}
       {loading ? <img src={spinner} alt="loading" /> : null}
     </div>
